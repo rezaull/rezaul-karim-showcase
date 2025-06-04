@@ -7,6 +7,18 @@ const Hero = () => {
     <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 via-blue-50 to-purple-50 dark:from-slate-900 dark:via-purple-900 dark:to-slate-900 text-gray-900 dark:text-white pt-16 transition-colors">
       <div className="container mx-auto px-6 text-center">
         <div className="animate-fade-in">
+          {/* Profile Photo */}
+          <div className="mb-8 flex justify-center">
+            <div className="relative">
+              <img 
+                src="/lovable-uploads/fe03bf5e-9044-444f-8fbd-f3c4a8b657a8.png" 
+                alt="Rezaul Karim"
+                className="w-40 h-40 md:w-48 md:h-48 rounded-full object-cover border-4 border-white dark:border-slate-700 shadow-2xl"
+              />
+              <div className="absolute inset-0 rounded-full bg-gradient-to-br from-blue-600/20 via-purple-600/20 to-cyan-600/20"></div>
+            </div>
+          </div>
+          
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-600 dark:from-blue-400 dark:via-purple-400 dark:to-cyan-400 bg-clip-text text-transparent">
             Rezaul Karim
           </h1>
