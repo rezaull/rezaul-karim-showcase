@@ -1,7 +1,6 @@
 
 import { Code, Database, Globe, Smartphone, Zap, Wrench } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Progress } from "@/components/ui/progress";
 
 const Skills = () => {
   const skills = [
@@ -9,43 +8,37 @@ const Skills = () => {
       icon: <Zap className="h-8 w-8" />,
       title: "Python Automation",
       description: "Streamlining workflows and processes with intelligent automation solutions",
-      color: "from-yellow-400 to-orange-500",
-      progress: 95
+      color: "from-yellow-400 to-orange-500"
     },
     {
       icon: <Globe className="h-8 w-8" />,
       title: "Django",
       description: "Building robust, scalable web applications with Python's premier framework",
-      color: "from-green-400 to-green-600",
-      progress: 90
+      color: "from-green-400 to-green-600"
     },
     {
       icon: <Code className="h-8 w-8" />,
       title: "Laravel",
       description: "Creating elegant PHP applications with expressive, clean syntax",
-      color: "from-red-400 to-red-600",
-      progress: 85
+      color: "from-red-400 to-red-600"
     },
     {
       icon: <Smartphone className="h-8 w-8" />,
       title: "React",
       description: "Developing dynamic, interactive user interfaces with modern JavaScript",
-      color: "from-blue-400 to-cyan-500",
-      progress: 88
+      color: "from-blue-400 to-cyan-500"
     },
     {
       icon: <Database className="h-8 w-8" />,
       title: "Tailwind CSS",
       description: "Crafting beautiful, responsive designs with utility-first CSS framework",
-      color: "from-teal-400 to-blue-500",
-      progress: 92
+      color: "from-teal-400 to-blue-500"
     },
     {
       icon: <Wrench className="h-8 w-8" />,
       title: "WordPress",
       description: "Building custom themes and plugins for content management solutions",
-      color: "from-purple-400 to-purple-600",
-      progress: 80
+      color: "from-purple-400 to-purple-600"
     }
   ];
 
@@ -76,19 +69,9 @@ const Skills = () => {
                 <CardTitle className="text-gray-900 dark:text-white text-xl">{skill.title}</CardTitle>
               </CardHeader>
               <CardContent>
-                <CardDescription className="text-gray-600 dark:text-gray-400 text-base mb-4">
+                <CardDescription className="text-gray-600 dark:text-gray-400 text-base">
                   {skill.description}
                 </CardDescription>
-                <div className="space-y-2">
-                  <div className="flex justify-between items-center">
-                    <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Proficiency</span>
-                    <span className="text-sm font-bold text-purple-600 dark:text-purple-400">{skill.progress}%</span>
-                  </div>
-                  <Progress 
-                    value={skill.progress} 
-                    className="h-2 bg-gray-200 dark:bg-slate-700"
-                  />
-                </div>
               </CardContent>
             </Card>
           ))}

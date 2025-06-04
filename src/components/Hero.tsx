@@ -9,13 +9,13 @@ const Hero = () => {
         <div className="animate-fade-in">
           {/* Profile Photo */}
           <div className="mb-8 flex justify-center">
-            <div className="relative">
+            <div className="relative group cursor-pointer">
               <img 
                 src="/lovable-uploads/fe03bf5e-9044-444f-8fbd-f3c4a8b657a8.png" 
                 alt="Rezaul Karim"
-                className="w-40 h-40 md:w-48 md:h-48 rounded-full object-cover border-4 border-white dark:border-slate-700 shadow-2xl"
+                className="w-40 h-40 md:w-48 md:h-48 rounded-full object-cover border-4 border-white dark:border-slate-700 shadow-2xl transition-transform duration-500 group-hover:scale-110"
               />
-              <div className="absolute inset-0 rounded-full bg-gradient-to-br from-blue-600/20 via-purple-600/20 to-cyan-600/20"></div>
+              <div className="absolute inset-0 rounded-full bg-gradient-to-br from-blue-600/20 via-purple-600/20 to-cyan-600/20 transition-opacity duration-500 group-hover:opacity-75"></div>
             </div>
           </div>
           
