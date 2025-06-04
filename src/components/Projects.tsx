@@ -57,13 +57,13 @@ const Projects = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-slate-800 to-slate-900 text-white">
+    <section className="py-20 bg-gradient-to-br from-gray-100 via-blue-50 to-purple-50 dark:from-slate-800 dark:to-slate-900 text-gray-900 dark:text-white transition-colors">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-green-600 to-blue-600 dark:from-green-400 dark:to-blue-400 bg-clip-text text-transparent">
             Featured Projects
           </h2>
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
             A showcase of innovative solutions and successful implementations
           </p>
         </div>
@@ -72,7 +72,7 @@ const Projects = () => {
           {projects.map((project, index) => (
             <Card 
               key={index} 
-              className="bg-slate-800 border-slate-700 hover:border-blue-500 transition-all duration-300 transform hover:scale-105 group overflow-hidden"
+              className="bg-white dark:bg-slate-800 border-gray-200 dark:border-slate-700 hover:border-blue-500 dark:hover:border-blue-500 transition-all duration-300 transform hover:scale-105 group overflow-hidden"
             >
               <div className="relative overflow-hidden">
                 <img 
@@ -80,12 +80,12 @@ const Projects = () => {
                   alt={project.title}
                   className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-800 to-transparent opacity-60"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-white/60 to-transparent dark:from-slate-800/60 dark:to-transparent opacity-60"></div>
               </div>
               
               <CardHeader>
-                <CardTitle className="text-white text-xl">{project.title}</CardTitle>
-                <CardDescription className="text-gray-400">
+                <CardTitle className="text-gray-900 dark:text-white text-xl">{project.title}</CardTitle>
+                <CardDescription className="text-gray-600 dark:text-gray-400">
                   {project.description}
                 </CardDescription>
               </CardHeader>
@@ -96,7 +96,7 @@ const Projects = () => {
                     <Badge 
                       key={tagIndex} 
                       variant="secondary" 
-                      className="bg-slate-700 text-blue-400 hover:bg-slate-600"
+                      className="bg-gray-100 dark:bg-slate-700 text-blue-600 dark:text-blue-400 hover:bg-gray-200 dark:hover:bg-slate-600"
                     >
                       {tag}
                     </Badge>
@@ -114,7 +114,7 @@ const Projects = () => {
                   </Button>
                   <Button 
                     size="sm" 
-                    className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700"
+                    className="bg-gradient-to-r from-blue-600 to-purple-700 hover:from-blue-700 hover:to-purple-800 dark:from-blue-500 dark:to-purple-600 dark:hover:from-blue-600 dark:hover:to-purple-700"
                   >
                     <ExternalLink className="mr-2 h-4 w-4" />
                     Demo

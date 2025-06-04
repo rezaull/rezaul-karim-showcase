@@ -43,13 +43,13 @@ const Skills = () => {
   ];
 
   return (
-    <section className="py-20 bg-slate-900 text-white">
+    <section className="py-20 bg-gray-50 dark:bg-slate-900 text-gray-900 dark:text-white transition-colors">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 bg-clip-text text-transparent">
             Expertise Areas
           </h2>
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
             Leveraging cutting-edge technologies to deliver exceptional digital solutions
           </p>
         </div>
@@ -58,7 +58,7 @@ const Skills = () => {
           {skills.map((skill, index) => (
             <Card 
               key={index} 
-              className="bg-slate-800 border-slate-700 hover:border-purple-500 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl group"
+              className="bg-white dark:bg-slate-800 border-gray-200 dark:border-slate-700 hover:border-purple-500 dark:hover:border-purple-500 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl group"
             >
               <CardHeader>
                 <div className={`w-16 h-16 rounded-full bg-gradient-to-br ${skill.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
@@ -66,10 +66,10 @@ const Skills = () => {
                     {skill.icon}
                   </div>
                 </div>
-                <CardTitle className="text-white text-xl">{skill.title}</CardTitle>
+                <CardTitle className="text-gray-900 dark:text-white text-xl">{skill.title}</CardTitle>
               </CardHeader>
               <CardContent>
-                <CardDescription className="text-gray-400 text-base">
+                <CardDescription className="text-gray-600 dark:text-gray-400 text-base">
                   {skill.description}
                 </CardDescription>
               </CardContent>

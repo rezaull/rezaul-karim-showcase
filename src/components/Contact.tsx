@@ -13,13 +13,13 @@ const Contact = () => {
   };
 
   return (
-    <section className="py-20 bg-slate-900 text-white">
+    <section className="py-20 bg-gray-50 dark:bg-slate-900 text-gray-900 dark:text-white transition-colors">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-600 to-pink-600 dark:from-purple-400 dark:to-pink-400 bg-clip-text text-transparent">
             Let's Work Together
           </h2>
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
             Ready to bring your ideas to life? Get in touch and let's discuss your next project.
           </p>
         </div>
@@ -28,8 +28,8 @@ const Contact = () => {
           {/* Contact Information */}
           <div className="space-y-8">
             <div>
-              <h3 className="text-2xl font-bold mb-6 text-white">Get In Touch</h3>
-              <p className="text-gray-400 mb-8">
+              <h3 className="text-2xl font-bold mb-6 text-gray-900 dark:text-white">Get In Touch</h3>
+              <p className="text-gray-600 dark:text-gray-400 mb-8">
                 I'm always excited to work on new projects and collaborate with amazing people. 
                 Whether you need automation solutions, web development, or technical consultation, 
                 I'm here to help.
@@ -42,8 +42,8 @@ const Contact = () => {
                   <Phone className="h-6 w-6 text-white" />
                 </div>
                 <div>
-                  <h4 className="text-lg font-semibold text-white">WhatsApp</h4>
-                  <p className="text-gray-400">01777665365</p>
+                  <h4 className="text-lg font-semibold text-gray-900 dark:text-white">WhatsApp</h4>
+                  <p className="text-gray-600 dark:text-gray-400">01777665365</p>
                 </div>
               </div>
 
@@ -52,8 +52,8 @@ const Contact = () => {
                   <Mail className="h-6 w-6 text-white" />
                 </div>
                 <div>
-                  <h4 className="text-lg font-semibold text-white">Email</h4>
-                  <p className="text-gray-400">contact@rezaulkarim.dev</p>
+                  <h4 className="text-lg font-semibold text-gray-900 dark:text-white">Email</h4>
+                  <p className="text-gray-600 dark:text-gray-400">contact@rezaulkarim.dev</p>
                 </div>
               </div>
 
@@ -62,18 +62,18 @@ const Contact = () => {
                   <MapPin className="h-6 w-6 text-white" />
                 </div>
                 <div>
-                  <h4 className="text-lg font-semibold text-white">Location</h4>
-                  <p className="text-gray-400">Available for remote work worldwide</p>
+                  <h4 className="text-lg font-semibold text-gray-900 dark:text-white">Location</h4>
+                  <p className="text-gray-600 dark:text-gray-400">Available for remote work worldwide</p>
                 </div>
               </div>
             </div>
           </div>
 
           {/* Contact Form */}
-          <Card className="bg-slate-800 border-slate-700">
+          <Card className="bg-white dark:bg-slate-800 border-gray-200 dark:border-slate-700">
             <CardHeader>
-              <CardTitle className="text-white">Send a Message</CardTitle>
-              <CardDescription className="text-gray-400">
+              <CardTitle className="text-gray-900 dark:text-white">Send a Message</CardTitle>
+              <CardDescription className="text-gray-600 dark:text-gray-400">
                 Fill out the form below and I'll get back to you as soon as possible.
               </CardDescription>
             </CardHeader>
@@ -82,26 +82,26 @@ const Contact = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <Input 
                     placeholder="Your Name" 
-                    className="bg-slate-700 border-slate-600 text-white placeholder-gray-400"
+                    className="bg-gray-50 border-gray-300 dark:bg-slate-700 dark:border-slate-600 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400"
                   />
                   <Input 
                     type="email" 
                     placeholder="Your Email" 
-                    className="bg-slate-700 border-slate-600 text-white placeholder-gray-400"
+                    className="bg-gray-50 border-gray-300 dark:bg-slate-700 dark:border-slate-600 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400"
                   />
                 </div>
                 <Input 
                   placeholder="Subject" 
-                  className="bg-slate-700 border-slate-600 text-white placeholder-gray-400"
+                  className="bg-gray-50 border-gray-300 dark:bg-slate-700 dark:border-slate-600 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400"
                 />
                 <Textarea 
                   placeholder="Your Message" 
                   rows={5}
-                  className="bg-slate-700 border-slate-600 text-white placeholder-gray-400"
+                  className="bg-gray-50 border-gray-300 dark:bg-slate-700 dark:border-slate-600 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400"
                 />
                 <Button 
                   type="submit" 
-                  className="w-full bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 transform hover:scale-105 transition-all duration-300"
+                  className="w-full bg-gradient-to-r from-purple-600 to-pink-700 hover:from-purple-700 hover:to-pink-800 dark:from-purple-500 dark:to-pink-600 dark:hover:from-purple-600 dark:hover:to-pink-700 transform hover:scale-105 transition-all duration-300"
                 >
                   <Send className="mr-2 h-4 w-4" />
                   Send Message
