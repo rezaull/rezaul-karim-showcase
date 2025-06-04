@@ -43,7 +43,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4 className="text-lg font-semibold text-gray-900 dark:text-white">WhatsApp</h4>
-                  <p className="text-gray-600 dark:text-gray-400">01777665365</p>
+                  <p className="text-gray-600 dark:text-gray-400">01777889900</p>
                 </div>
               </div>
 
