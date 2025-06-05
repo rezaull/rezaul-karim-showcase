@@ -1,6 +1,7 @@
 
 import { Github, Linkedin, Mail, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import profileImg from "../assets/upscale this photo.png"
 
 const Hero = () => {
   return (
@@ -11,7 +12,7 @@ const Hero = () => {
           <div className="mb-8 flex justify-center">
             <div className="relative group cursor-pointer">
               <img 
-                src="/lovable-uploads/fe03bf5e-9044-444f-8fbd-f3c4a8b657a8.png" 
+                src={profileImg} 
                 alt="Rezaul Karim"
                 className="w-40 h-40 md:w-48 md:h-48 rounded-full object-cover border-4 border-white dark:border-slate-700 shadow-2xl transition-transform duration-500 group-hover:scale-110"
               />

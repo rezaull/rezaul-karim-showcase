@@ -10,9 +10,6 @@ env:
   REMOTE_USER: "ezbitlyc"
   REMOTE_HOST: "reza.nexxenit.com"
   REMOTE_PATH: "/home/ezbitlyc/reza.nexxenit.com"
-  
-  TELEGRAM_BOT_TOKEN: "8187320150:AAFaUAZzia395zJFDIWCXMMUduV0ebxJIp0"
-  TELEGRAM_CHAT_ID: "-1002293329405"
 
 jobs:
   deploy:
@@ -22,12 +19,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Send Start Notification
-        run: |
-          curl -s -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
-          -d chat_id="${TELEGRAM_CHAT_ID}" \
-          -d text="🚀 *${APP_NAME} Deployment Started!*\n👤 Triggered by: ${{ github.actor }}\n📝 Commit: ${{ github.event.head_commit.message }}" \
-          -d parse_mode="Markdown"
+      # Removed: Send Start Notification
 
       - name: Setup Node.js
         uses: actions/setup-node@v2
@@ -37,10 +29,6 @@ jobs:
       - name: Install dependencies
         run: |
           npm install
-          curl -s -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
-          -d chat_id="${TELEGRAM_CHAT_ID}" \
-          -d text="📦 *Dependencies Installed Successfully!*" \
-          -d parse_mode="Markdown"
 
       - name: Build project
         id: build
@@ -50,10 +38,6 @@ jobs:
           END_TIME=$(date +%s)
           BUILD_TIME=$((END_TIME - START_TIME))
           echo "::set-output name=build_time::$BUILD_TIME"
-          curl -s -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
-          -d chat_id="${TELEGRAM_CHAT_ID}" \
-          -d text="✅ *Build Successful!*\n🕒 Build Time: *${BUILD_TIME}s*" \
-          -d parse_mode="Markdown"
 
       - name: Install SSH Keys
         uses: shimataro/ssh-key-action@v2
@@ -75,28 +59,10 @@ jobs:
           if rsync -avz --delete ./dist/ ${REMOTE_USER}@${REMOTE_HOST}:${REMOTE_PATH}/; then
             END_TIME=$(date +%s)
             UPLOAD_TIME=$((END_TIME - START_TIME))
-            
-            curl -s -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
-            -d chat_id="${TELEGRAM_CHAT_ID}" \
-            -d text="📡 *Files Uploaded Successfully!*\n🕒 Upload Time: *${UPLOAD_TIME}s*\n📦 Upload Size: *${FOLDER_SIZE}*" \
-            -d parse_mode="Markdown"
-            
-            curl -s -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
-            -d chat_id="${TELEGRAM_CHAT_ID}" \
-            -d text="🏁 *${APP_NAME} Deployment Completed!*\n🔗 Visit: ${APP_URL}\n👤 Deployed by: ${{ github.actor }}" \
-            -d parse_mode="Markdown"
+            echo "Files uploaded successfully."
           else
-            curl -s -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
-            -d chat_id="${TELEGRAM_CHAT_ID}" \
-            -d text="❌ *Deployment Failed!*\n\`\`\`\nUpload failed during rsync operation\n\`\`\`\n👤 User: ${{ github.actor }}" \
-            -d parse_mode="Markdown"
+            echo "Upload failed during rsync operation"
             exit 1
           fi
 
-      - name: Notify on Failure
-        if: failure()
-        run: |
-          curl -s -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
-          -d chat_id="${TELEGRAM_CHAT_ID}" \
-          -d text="❌ *Deployment Process Failed!*\n👤 User: ${{ github.actor }}\n⚠️ Step: ${{ github.job }}" \
-          -d parse_mode="Markdown"
+      # Removed: Notify on Failure
