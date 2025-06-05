@@ -59,7 +59,7 @@ const Footer = () => {
 
         <div className="border-t border-gray-700 dark:border-slate-800 mt-8 pt-8 text-center">
           <p className="text-gray-300 dark:text-gray-400 flex items-center justify-center">
-            © 2024 Rezaul Karim. Made with <Heart className="h-4 w-4 mx-1 text-red-500" /> and passion for code.
+            © 2025 Rezaul Karim. Made with <Heart className="h-4 w-4 mx-1 text-red-500" /> and passion for code.
           </p>
         </div>
       </div>
