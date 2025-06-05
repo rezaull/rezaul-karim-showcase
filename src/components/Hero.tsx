@@ -9,7 +9,7 @@ const Hero = () => {
       <div className="container mx-auto px-6 text-center">
         <div className="animate-fade-in">
           {/* Profile Photo */}
-          <div className="mb-8 flex justify-center">
+          <div className="mb-8 mt-10 flex justify-center">
             <div className="relative group cursor-pointer">
               <img 
                 src={profileImg} 
