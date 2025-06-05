@@ -5,11 +5,12 @@ on:
       - main
 
 env:
-  APP_NAME: "Nexxen IT"
+  APP_NAME: "Rezaul Karim"
   APP_URL: "https://reza.nexxenit.com"
   REMOTE_USER: "ezbitlyc"
   REMOTE_HOST: "reza.nexxenit.com"
   REMOTE_PATH: "/home/ezbitlyc/reza.nexxenit.com"
+  
   TELEGRAM_BOT_TOKEN: "8187320150:AAFaUAZzia395zJFDIWCXMMUduV0ebxJIp0"
   TELEGRAM_CHAT_ID: "-1002293329405"
 
