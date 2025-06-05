@@ -45,10 +45,10 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-4 text-white">Quick Contact</h4>
             <div className="space-y-2 text-gray-300 dark:text-gray-400">
               <p className="hover:text-white transition-colors duration-300">
-                <strong>WhatsApp:</strong> 01777665365
+                <strong>WhatsApp:</strong> 01777889900
               </p>
               <p className="hover:text-white transition-colors duration-300">
-                <strong>Email:</strong> contact@rezaulkarim.dev
+                <strong>Email:</strong> contact@nexxenit.com
               </p>
               <p className="hover:text-white transition-colors duration-300">
                 <strong>Status:</strong> Available for new projects
